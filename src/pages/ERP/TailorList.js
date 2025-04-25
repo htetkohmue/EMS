@@ -90,6 +90,7 @@ export default function TailorList() {
   const [open, setOpen] = useState(false);
   const [deleteTailorId, setDeleteTailorId] = useState([]);
   const [loadingOpen, setloadingOpen] = useState(false); // for values
+  
 
   // ----------------------------------------------------------------------
 const TABLE_HEAD = [
@@ -105,6 +106,10 @@ const TABLE_HEAD = [
 
   /* Formload get tailor data */
   useEffect(() => {(async () => {
+    setloadingOpen(true);
+      setTimeout(() => {
+        setloadingOpen(false);
+    }, 500)
     const data = {'language':localStorage.getItem('selectedLanguageName')}
     const obj = {url: ApiPath.getTailorData, method: 'get', params:data};
     const response = await ApiRequest(obj);

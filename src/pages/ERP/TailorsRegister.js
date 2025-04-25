@@ -42,6 +42,10 @@ export default function TailorsRegister() {
   const { id, setId } = useParams();
   useEffect(() => {
     (async () => {
+      setloadingOpen(true);
+      setTimeout(() => {
+        setloadingOpen(false);
+      }, 500)
       const data = {};
       const apiPath = ApiPath.editTailorData;
       const obj = { url: `${apiPath}/${id}`, method: 'get', params: data };

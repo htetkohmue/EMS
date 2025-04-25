@@ -18,6 +18,37 @@ const navConfig = [
     
   },
   {
+    title: 'Employee Management',
+    path : null,
+    icon: getIcon('eva:people-fill'),
+    children: [
+          {
+            title: "Employee List",
+            path: "",
+            icon: getIcon('eva:people-fill'),
+          },
+
+    ],
+  },
+  {
+    title: 'Course Management',
+    path : null,
+    icon: getIcon('eva:shopping-bag-fill'),
+    children: [
+          {
+            title: "Program List",
+            path: "",
+            icon: getIcon('eva:people-fill'),
+          },
+          {
+            title: "Course List",
+            path: "",
+            icon: getIcon('eva:people-fill'),
+          },
+
+    ],
+  },
+  {
     title: 'Tailor',
     path : null,
     icon: getIcon('eva:people-fill'),

@@ -18,7 +18,7 @@ const navConfig = [
     
   },
   {
-    title: 'Inquiry Managemen',
+    title: 'Inquiry Management',
     path : null,
     icon: getIcon('eva:people-fill'),
     children: [

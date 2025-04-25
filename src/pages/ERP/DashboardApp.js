@@ -1,6 +1,8 @@
 // @mui
 import { useTheme } from '@mui/material/styles';
+import { useState,useEffect } from 'react';
 import { Grid, Container, Typography ,TextField } from '@mui/material';
+import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 // components
 import Page from '../../components/Page';
@@ -8,6 +10,7 @@ import Page from '../../components/Page';
 import {
   AppWidgetSummary,
 } from '../../sections/ERP/@dashboard/app';
+import  Loading from '../../common/LoadingPage/Loading';
 
 
 // ----------------------------------------------------------------------
@@ -15,10 +18,18 @@ import {
 export default function DashboardApp() {
   const theme = useTheme();
   const { t } = useTranslation();
-  
+  const { pathname } = useLocation();
+  const [loadingOpen, setloadingOpen] = useState(false); // for values
+  useEffect(() => {
+    setloadingOpen(true);
+    setTimeout(() => {
+      setloadingOpen(false);
+    }, 500)
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [pathname]);
   return (
     <Page title="Dashboard">
-      
+      {loadingOpen && (<Loading loadingOpen={loadingOpen} />)}
       <Container maxWidth="xl"  >
         <Typography variant="h4" sx={{ mb: 5 }}>
           {t('welcome')} : ERP Management
