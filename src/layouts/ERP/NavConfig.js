@@ -48,24 +48,24 @@ const navConfig = [
 
     ],
   },
-  {
-    title: 'Tailor',
-    path : null,
-    icon: getIcon('eva:people-fill'),
-    children: [
-          {
-            title: "Tailors Register",
-            path: "/erp/tailor/tailors-register",
-            icon: getIcon('eva:person-add-fill'),
-          },
-          {
-            title: "Tailors List",
-            path: "/erp/tailor/tailors-list",
-            icon: getIcon('eva:people-fill'),
-          },
+  // {
+  //   title: 'Tailor',
+  //   path : null,
+  //   icon: getIcon('eva:people-fill'),
+  //   children: [
+  //         {
+  //           title: "Tailors Register",
+  //           path: "/erp/tailor/tailors-register",
+  //           icon: getIcon('eva:person-add-fill'),
+  //         },
+  //         {
+  //           title: "Tailors List",
+  //           path: "/erp/tailor/tailors-list",
+  //           icon: getIcon('eva:people-fill'),
+  //         },
 
-    ],
-  }
+  //   ],
+  // }
 ];
 
 export default navConfig;
