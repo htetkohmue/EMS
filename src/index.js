@@ -12,14 +12,21 @@ import reportWebVitals from './reportWebVitals';
 
 // ----------------------------------------------------------------------
 
-ReactDOM.render(
-  <HelmetProvider>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </HelmetProvider>,
-  document.getElementById('root')
-);
+// ReactDOM.render(
+//   <HelmetProvider>
+//     <BrowserRouter>
+//       <App />
+//     </BrowserRouter>
+//   </HelmetProvider>,
+//   document.getElementById('root')
+// );
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<HelmetProvider>
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+</HelmetProvider>);
 
 // If you want to enable client cache, register instead.
 serviceWorker.unregister();

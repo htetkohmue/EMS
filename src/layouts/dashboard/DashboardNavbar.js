@@ -1,13 +1,15 @@
 import PropTypes from 'prop-types';
 // material
 import { alpha, styled } from '@mui/material/styles';
-import { Box, Stack, AppBar, Toolbar, IconButton } from '@mui/material';
+import { Box, Stack, AppBar, Toolbar, IconButton,Typography } from '@mui/material';
 // components
 import Iconify from '../../components/Iconify';
 //
 import Searchbar from './Searchbar';
 import AccountPopover from './AccountPopover';
 import LanguagePopover from './LanguagePopover';
+import NotificationsPopover from './NotificationsPopover';
+import Logo from '../../components/Logo';
 
 // ----------------------------------------------------------------------
 
@@ -43,16 +45,25 @@ export default function DashboardNavbar({onOpenSidebar , props}) {
   return (
     <RootStyle>
       <ToolbarStyle>
+      <Stack  sx={{ px: 2, py: 1.5}}>
+        <Box sx={{ px: 2.5, py: 3, display: 'inline-flex' }}>
+          <Logo /> 
+          <Typography variant="h4" color={'black'} sx={{ ml:3,mr:2 }}>
+          Education Management System
+          </Typography>
+        </Box>
+      </Stack>
         <IconButton onClick={onOpenSidebar} sx={{ mr: 1, color: 'text.primary', display: { lg: 'none' } }}>
           <Iconify icon="eva:menu-2-fill" />
         </IconButton>
 
         <Searchbar />
         <Box sx={{ flexGrow: 1 }} />
-
+       
         <Stack direction="row" alignItems="center" spacing={{ xs: 0.5, sm: 1.5 }}>
           <LanguagePopover props={props}/>
-          <AccountPopover />
+          <NotificationsPopover />
+          {/* <AccountPopover /> */}
         </Stack>
       </ToolbarStyle>
     </RootStyle>

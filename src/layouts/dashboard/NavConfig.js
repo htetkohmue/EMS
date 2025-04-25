@@ -12,6 +12,12 @@ const navConfig = [
     icon: getIcon('eva:pie-chart-2-fill'),
   },
   {
+    title: 'Inquiry Management',
+    path: '/dashboard/',
+    icon: getIcon('eva:shopping-bag-fill'),
+    
+  },
+  {
     title: 'Tailor',
     path : null,
     icon: getIcon('eva:people-fill'),
@@ -28,13 +34,7 @@ const navConfig = [
           },
 
     ],
-  },
-  {
-    title: 'Home Page',
-    path: '/dashboard/',
-    icon: getIcon('eva:shopping-bag-fill'),
-    
-  },
+  }
 ];
 
 export default navConfig;
