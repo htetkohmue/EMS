@@ -6,7 +6,6 @@ import { Box, Stack, AppBar, Toolbar, IconButton,Typography } from '@mui/materia
 import Iconify from '../../components/Iconify';
 //
 import Searchbar from './Searchbar';
-import AccountPopover from './AccountPopover';
 import LanguagePopover from './LanguagePopover';
 import NotificationsPopover from './NotificationsPopover';
 import Logo from '../../components/Logo';
@@ -63,7 +62,6 @@ export default function DashboardNavbar({onOpenSidebar , props}) {
         <Stack direction="row" alignItems="center" spacing={{ xs: 0.5, sm: 1.5 }}>
           <LanguagePopover props={props}/>
           <NotificationsPopover />
-          {/* <AccountPopover /> */}
         </Stack>
       </ToolbarStyle>
     </RootStyle>

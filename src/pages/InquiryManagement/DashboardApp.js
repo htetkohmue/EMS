@@ -7,7 +7,7 @@ import Page from '../../components/Page';
 // sections
 import {
   AppWidgetSummary,
-} from '../../sections/ERP/@dashboard/app';
+} from '../../sections/InquiryManagement/@dashboard/app';
 
 
 // ----------------------------------------------------------------------
@@ -21,7 +21,7 @@ export default function DashboardApp() {
       
       <Container maxWidth="xl"  >
         <Typography variant="h4" sx={{ mb: 5 }}>
-          {t('welcome')} : ERP Management
+          {t('welcome')} : Inquiry Management
         </Typography>
         
 

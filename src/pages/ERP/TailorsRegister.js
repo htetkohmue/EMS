@@ -154,13 +154,11 @@ export default function TailorsRegister() {
           )}
           {validatorErrorMsg.length!==0 && (
             <Alert variant="filled" severity="error">
-            <b> {validatorErrorMsg.map((data, index) => {
-            return (
-              <div key={index} style={{ color: 'white' }}>
-                {data}
-              </div>
-            );
-          })}</b>
+            <b> {Array.isArray(validatorErrorMsg) &&
+              validatorErrorMsg.map((msg, index) => (
+                <p key={index} style={{ color: 'red' }}>{msg}</p>
+              ))
+            }</b>
           </Alert>
           )}
         <ContentStyle>

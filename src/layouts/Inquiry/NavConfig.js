@@ -8,28 +8,28 @@ const getIcon = (name) => <Iconify icon={name} width={22} height={22} />;
 const navConfig = [
   {
     title: 'dashboard',
-    path: '/erp/dashboard/app',
+    path: '/inquiry/dashboard/app',
     icon: getIcon('eva:pie-chart-2-fill'),
   },
   {
-    title: 'Inquiry Management',
-    path: '/dashboard/',
+    title: 'ERP Management',
+    path: '/erp/dashboard/app',
     icon: getIcon('eva:shopping-bag-fill'),
     
   },
   {
-    title: 'Tailor',
+    title: 'Inquiry Managemen',
     path : null,
     icon: getIcon('eva:people-fill'),
     children: [
           {
-            title: "Tailors Register",
-            path: "/erp/tailor/tailors-register",
+            title: "Inquiry List",
+            path: "",
             icon: getIcon('eva:person-add-fill'),
           },
           {
-            title: "Tailors List",
-            path: "/erp/tailor/tailors-list",
+            title: "Appointment List",
+            path: "",
             icon: getIcon('eva:people-fill'),
           },
 
