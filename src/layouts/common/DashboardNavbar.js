@@ -17,6 +17,7 @@ const APPBAR_MOBILE = 64;
 const APPBAR_DESKTOP = 92;
 
 const RootStyle = styled(AppBar)(({ theme }) => ({
+  border:'1px',
   boxShadow: 'none',
   backdropFilter: 'blur(6px)',
   WebkitBackdropFilter: 'blur(6px)', // Fix on Mobile
@@ -44,8 +45,8 @@ export default function DashboardNavbar({onOpenSidebar , props}) {
   return (
     <RootStyle>
       <ToolbarStyle>
-      <Stack  sx={{ px: 2, py: 1.5}}>
-        <Box sx={{ px: 2.5, py: 3, display: 'inline-flex' }}>
+      <Stack  sx={{ py: 1.5}}>
+        <Box sx={{ py: 1.5, display: 'inline-flex' }}>
           <Logo /> 
           <Typography variant="h4" color={'black'} sx={{ ml:3,mr:2 }}>
           Education Management System
